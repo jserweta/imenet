@@ -1,0 +1,190 @@
+.contact{
+    position: relative;
+    &__details-wrapper{
+        margin-right: $columns-margin;
+        @media (max-width: $container-ipad-landscape){
+            margin-right: 0;
+        }
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+       
+    }
+    &__desc{
+        line-height: 2.2;
+    }
+    &__single{
+        display: grid;
+        grid-template-columns:40px 1fr;
+        margin-top:1.5rem;
+        color:$color-white;
+        width: max-content;
+
+        a{
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+        svg{
+            padding-right: 8px;
+            vertical-align: middle;
+        }
+
+    }
+    &__single:hover{
+        color:$color-paragraphs;
+    }
+
+    &__label-details{
+        margin-top:5rem;
+    }
+    
+    &__details{
+        margin-top:2rem;
+        margin-bottom:2rem;
+        position: relative;
+        z-index: 1;
+        color:$color-white;
+
+        .sub-heading{
+            color:$color-white;
+            margin-bottom:0;
+        }
+        p{
+            margin-top:0;
+        }
+    }
+
+    
+    
+    &__form-sec{
+        margin-left:$columns-margin;
+        @media(max-width: $container-ipad-landscape){
+            margin-left:0;
+            margin-top: 60px;
+        }
+
+        textarea, input[type=email], input[type=text]{
+            font-family: $font-paragraphs;
+            font-size:14px;
+            background: $color-lightgrey;
+            border:0;
+            color: #2b2c27;
+            width:100%;
+            padding: 15px 20px;
+            line-height: 24px;
+            transition: background $transition-duration;
+            text-decoration: none;
+            position: relative;
+            border-radius: 0;
+            appearance: none;
+            margin-bottom: 5px;
+        }
+
+        input[type=email], input[type=text]{
+            max-height:70px;
+        }
+
+        textarea:focus, input[type="email"]:focus, input[type="text"]:focus{
+            //border:2px solid rgba(0,0,0,0.1);
+            border:none;
+            background-color: $color-grey;
+            outline: 0;
+        }
+
+        textarea{
+            max-height: 200px;
+            margin-bottom:20px;
+        }
+
+        p{
+            margin-block-start: 0.1em;
+            margin-block-end: 0.1em;
+            margin-bottom:0px;
+        }
+
+        .rodo{
+            input[type=checkbox] {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                opacity: 1;
+                margin-right: 10px;
+            }
+            label p{
+                margin-left:25px;
+                font-size:14px;
+                color: $color-paragraphs;
+                display: inline;
+            } 
+           
+            .wpcf7-list-item{
+                margin-left:0;
+                label{
+                    display: flex;
+                }
+            }
+            .wpcf7-list-item-label{
+                display: flex;
+            }
+            
+        }
+
+        input[type=submit]{
+            background: $color-white;
+            color: $color-main;
+            border:3px solid $color-main;
+            mix-blend-mode: normal;
+            padding: 20px 40px;
+            min-width: 200px;
+            width:auto;
+            font-size: $font-size-large;
+            text-align: center;
+            border-radius: 0;
+            margin-top: 1rem;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            /*transition: 150ms linear background;*/
+        }
+        input[type=submit]:focus{
+            border:0;
+            outline: 0;
+        }
+        input[type=submit]:hover{
+            border:3px solid $color-main;
+            color:$color-white;
+            //font-weight: $font-weight-headings;
+            background-color: $color-main;
+            transition-duration: $transition-duration;
+        }
+        .wpcf7-not-valid-tip{
+            font-size:1rem;
+        }
+        .wpcf7{
+            form{
+                .wpcf7-response-output {
+                    margin: 1em 0.2em 1em;
+                    padding: 0.2em 0.2em;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .details-overlay{
+        background-color: $color-main;
+        position: absolute;
+        height: calc(50% + 6rem);
+        top: calc(25% - 3rem);
+        bottom: 0;
+        right: 50%;
+        left: 0;
+        z-index: -1;
+        @media(max-width: $container-ipad-landscape){
+            top:0;
+            right: 0;
+            height: 40%;
+        }
+    }
+}

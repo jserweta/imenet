@@ -1,0 +1,81 @@
+// ------------------------------------------------
+// Front page
+//
+// The most important page on the website goes here.
+// You can force the styles by defining them inside
+// the body.
+// ------------------------------------------------
+
+.section-header{
+   @include responsive-font($font-size-min-h1, $font-size-max-h2);
+}
+
+.section-header:after, .sub-heading:after{
+    content: "";
+    display: block;
+    border-top: 2px solid $color-main;
+    border-bottom: 2px solid $color-main;
+    background-color: $color-main;
+    width: 90px;
+    border-radius: 20px;
+    margin-top: 10px; 
+}
+
+
+.sub-heading{
+    @include responsive-font($font-size-min-h2, $font-size-max-h3);
+}
+.button-border-blue{
+    display: inline-block;
+    background: $color-white;
+    color: $color-main;
+    border:3px solid $color-main;
+    font-weight: $font-weight-headings;
+    mix-blend-mode: normal;
+    padding: 20px 40px;
+    min-width: 120px;
+    width:auto;
+    font-size: $font-size-large;
+    text-align: center;
+    border-radius: 0;
+}
+
+.button-border-blue:hover{
+    border:3px solid $color-main;
+    color:$color-white;
+    //font-weight: $font-weight-headings;
+    background-color: $color-main;
+    transition-duration: $transition-duration;
+}
+
+.button-white-border{
+    display: inline-block;
+    background: transparent;
+    color: $color-white;
+    font-weight: $font-weight-headings;
+    border:3px solid $color-white;
+    mix-blend-mode: normal;
+    padding: 20px 40px;
+    min-width: 120px;
+    width: auto;
+    font-size: $font-size-large;
+    text-align: center;
+}
+.button-white-border:hover{
+    border:3px solid $color-white;
+    color:$color-main;
+    font-weight: $font-weight-headings;
+    background-color: $color-white;
+    transition-duration: $transition-duration;
+}
+
+.map-section{
+    height: 450px;
+    width: 100%;
+}
+
+@import '../components/front-page/hero';
+@import '../components/front-page/about-us';
+@import '../components/front-page/cta-section';
+@import '../components/front-page/what-we-do';
+@import '../components/front-page/contact';

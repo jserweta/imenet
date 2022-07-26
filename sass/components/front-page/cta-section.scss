@@ -1,0 +1,32 @@
+.cta-section{
+    .l-two-col{
+        gap:50px;
+       
+    }
+   
+    &__box{
+        justify-content: center;
+        border: 2px solid $color-lightgrey;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 5rem;
+        transition: all $transition-duration ease-in-out;
+    }
+    &__box:hover{
+        background: $color-lightgrey;
+        transform: scale(1.05);
+    }
+    &__icon svg{
+        height: 85px;
+        width: auto;
+        fill: $color-main;
+    }
+    &__header{
+        font-weight: $font-weight-black-heading;
+    }
+
+    .sub-heading:after{
+        display: none;
+    }
+}

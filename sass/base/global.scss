@@ -1,0 +1,60 @@
+@charset 'utf-8';
+
+// Reset & grid
+@import 'normalize';
+
+// Helpers
+@import '../helpers/animations';
+@import '../helpers/typography';
+@import '../helpers/general';
+@import '../helpers/aspect-ratio';
+@import '../helpers/background';
+@import '../helpers/grid';
+
+// Variables
+@import '../variables/colors';
+@import '../variables/layout';
+@import '../variables/breakpoints';
+@import '../variables/spacings';
+@import '../variables/fonts';
+
+// Vendors
+@import 'swiper/swiper-bundle';
+
+// Plugins
+@import '../plugins/contact-form-7';
+
+// Style components
+@import '../components/box-with-shadow';
+@import '../components/password-protected.scss';
+
+// Accessibility
+@import 'accessibility';
+
+// Navigation
+@import '../navigation/nav-core';
+@import '../navigation/nav-desktop';
+@import '../navigation/nav-mobile';
+
+// Structure
+@import '../layout/general';
+@import '../layout/typography';
+@import '../layout/site-header';
+@import '../layout/site-footer';
+@import '../layout/forms';
+@import '../layout/wordpress';
+
+// Global features
+@import '../features/top';
+@import '../features/gallery';
+@import '../features/pagination';
+//@import '../features/sticky-nav';
+
+// Views
+@import '../views/front-page';
+@import '../views/search';
+@import '../views/404';
+@import '../views/comments';
+
+// Modules
+// @import '../modules/some-module';

@@ -1,0 +1,90 @@
+// -----------------------------------------------------------
+// Site header
+//
+// The very top of the site, element that usually includes
+// the site navigation and search for example.
+// -----------------------------------------------------------
+
+.site-header {
+  position: relative;
+  z-index: 15;
+  padding-bottom: var(--padding-site-header-vertical);
+  padding-top: var(--padding-site-header-vertical);
+  padding-left: var(--padding-container-horizontal);
+  padding-right: var(--padding-container-horizontal);
+  max-width: $grid-base-size;
+  margin-left: auto;
+  margin-right: auto;
+
+  // Easier flex way to align logo and navigation
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 200px;
+}
+
+.top-bar {
+  display: none;
+}
+
+@if $top-bar==true {
+  .top-bar {
+    display: block;
+    background-color: $color-top-bar;
+    height: $top-bar-mobile;
+    transition: all $transition-duration ease;
+
+    @media (min-width: $responsivenav) {
+      height: $top-bar-expanded;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 15;
+      padding-left: var(--padding-container-horizontal);
+      padding-right: var(--padding-container-horizontal);
+      padding-top: 15px;
+      padding-bottom: 15px;
+      max-width: $grid-base-size;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    a {
+      font-size: $font-size-small;
+      display: block;
+    }
+
+    &__e-mails,
+    &__phones,
+    &__social-medias {
+      margin-left: 10px;
+    }
+
+    &__e-mails {
+      display: none;
+
+      @media (min-width: $container-mobile) {
+        display: block;
+      }
+    }
+
+    &__social-media {
+      svg {
+        display: block;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

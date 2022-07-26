@@ -1,0 +1,88 @@
+// ------------------------------------------------------------
+// Site footer
+//
+// The very bottom of the site. Usually contains supporting
+// or secondary navigation, social media icons, contact details
+// and such.
+//
+// Please note: These are mostly for demo purposes
+// so feel free to remove everything in this file
+// and start over.
+// ------------------------------------------------------------
+
+.site-footer {
+  //background-color: $color-main;
+  color: $color-paragraphs;
+  font-weight: 400;
+ 
+  &__site-branding{
+    display: flex;
+    flex-direction: column;
+    .logo{
+      margin-bottom:25px;
+    }
+    .slogan{
+      margin-bottom:25px;
+      
+      max-width: 225px;
+      line-height: 1.5;
+     // font-size: 1em;
+    }
+  }
+  &__footer-menu{
+    ul{
+      padding: 0;
+      margin:0;
+      @media(max-width: $container-ipad) {
+        margin-bottom:30px;
+      }
+    }
+    .menu-item{
+      padding-bottom:1rem;
+    }
+  }
+  &__e-mail, &__phone{
+    padding-bottom:1rem;
+  }
+  &__contact h3, &__footer-menu h3{
+    //color:$color-white;
+    color:$color-main;
+    font-weight: $font-weight-headings;
+
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: $font-size-huge;
+  }
+
+  &__theme-info {
+    //border-top:2px solid rgba($color-white, 0.72);
+    border-top:2px solid rgba($color-main, 0.72);
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom:20px;
+    padding-top:20px;
+
+    @media(min-width: $container-ipad) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+ 
+
+  &__privacy-policy {
+    margin-top: 1rem;
+
+    @media(min-width: $container-ipad) {
+      margin-top: 0;
+    }
+  }
+}
+
+.site-footer a{
+  //color:$color-white;
+  color: $color-text;
+}
+.site-footer a:hover{
+  //color:$color-black;
+  color: $color-main;
+}
